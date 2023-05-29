@@ -18,7 +18,7 @@ export class AddcourseComponent {
   registerForm!: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,private elementRef: ElementRef) { }
 
   ngOnInit(){
 
@@ -31,6 +31,10 @@ export class AddcourseComponent {
   },);
 
   }
+ngAfterViewInit() {
+    this.elementRef.nativeElement.ownerDocument
+        .body.style.backgroundColor = '#808080';
+}
   get f() { return this.registerForm.controls; }
 
   onSubmit() {
