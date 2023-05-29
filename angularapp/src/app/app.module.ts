@@ -25,6 +25,10 @@ import { StudentDetailsComponent } from './viewacademy/student-details/student-d
 import { AddinstituteComponent } from './adminacademy/addinstitute/addinstitute.component';
 import { EditinstituteComponent } from './adminacademy/editinstitute/editinstitute.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { EditcourseComponent } from './adminacademy/editcourse/editcourse.component';
+import { AddcourseComponent } from './adminacademy/addcourse/addcourse.component';
+import { AddstudentComponent } from './adminacademy/addstudent/addstudent.component';
+import { UpdatestudentComponent } from './adminacademy/updatestudent/updatestudent.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,11 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     AdminstudentComponent,
     StudentDetailsComponent,
     AddinstituteComponent,
-    EditinstituteComponent
+    EditinstituteComponent,
+    EditcourseComponent,
+    AddcourseComponent,
+    AddstudentComponent,
+    UpdatestudentComponent
   ],
   imports: [
     BrowserModule,

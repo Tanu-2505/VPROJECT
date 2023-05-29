@@ -6,14 +6,14 @@
     <br>
     <div class = "searchbar">
       <div class="form-group">
-        <input type="search" class="form-control me-2 search"  placeholder="Type here to search course" id="searchButton"/>
+        <input type="search" class="form-control me-2 search"  placeholder="Type here to search course" id="searchButton" [(ngModel)]="searchText"/>
         <button type="button" class="btn btn">Search</button>
       </div>
     </div>
     <br>
 
       <div class = "container">
-            <ng-container *ngFor = "let course of courses">
+            <ng-container *ngFor = "let course of courses | filter:searchText">
                   <div class="card shadow-lg rounded mb-4">
                       <div class="card-body">
                         <div class="left">

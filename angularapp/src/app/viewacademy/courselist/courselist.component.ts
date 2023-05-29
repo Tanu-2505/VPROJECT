@@ -8,6 +8,8 @@ import { Course } from 'src/app/class/course';
 })
 export class CourselistComponent {
 
+      searchText!:string;
+
       courses ?: Course[]=[
         new Course("M.E(VSI)",10,"20days","YYYY",50),
         new Course("M.E",10,"30days","ZZZZ",60),

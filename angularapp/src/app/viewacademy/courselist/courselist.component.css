@@ -13,7 +13,7 @@
 
 .btn
 {
-  background-color: #560764;
+  background-color: #096407;
   color: white;
   border: none;
   padding-left: 30px;
@@ -117,4 +117,5 @@
 {
   background-color: lightgrey;
   margin-bottom: 10px;
+  cursor: pointer;
 }

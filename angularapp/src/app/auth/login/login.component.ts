@@ -20,47 +20,68 @@ export class LoginComponent {
   onSubmit()
   {
     console.log(this.login);
-    this.loginservice.checkUserRole(this.login.email).subscribe((data) =>
+
+    if(this.login.email == "admin" && this.login.password == "admin" )
     {
-      this.userRole = data;
-      console.log(this.userRole);
-
-      if(this.userRole == "Admin")
-      {
-        this.validateadmin();
-      }
-      else if(this.userRole == "User")
-      {
-        this.validateuser();
-      }
-
-      else
-      {
-        alert("Mail id not exist create Account");
-      }
-
-    });
-  }
-
-  validateadmin()
-  {
-    console.log(this.login);
-    this.loginservice.checkAdmin(this.login).subscribe((data) =>
-    {
-      console.log(data);
       this.gotoAdmin();
-    });
+    }
+    else if(this.login.email == "user" && this.login.password == "user" )
+    {
+      this.gotoUser();
+    }
+    else
+    {
+      alert("error credentials");
+    }
+
+
+
+
+
+
+    // the below code belongs to backend connectivity - dont remove this
+
+    // this.loginservice.checkUserRole(this.login.email).subscribe((data) =>
+    // {
+    //   this.userRole = data;
+    //   console.log(this.userRole);
+
+    //   if(this.userRole == "Admin")
+    //   {
+    //     this.validateadmin();
+    //   }
+    //   else if(this.userRole == "User")
+    //   {
+    //     this.validateuser();
+    //   }
+
+    //   else
+    //   {
+    //     alert("Mail id not exist create Account");
+    //   }
+
+    // });
   }
 
-  validateuser()
-  {
-    console.log(this.login);
-    this.loginservice.checkUser(this.login).subscribe((data) =>
-    {
-      console.log(data);
-      this.gotoUser();
-    });
-  }
+  // validateadmin()
+  // {
+  //   console.log(this.login);
+  //   this.loginservice.checkAdmin(this.login).subscribe((data) =>
+  //   {
+  //     console.log(data);
+  //     this.gotoAdmin();
+  //   });
+  // }
+
+  // validateuser()
+  // {
+  //   console.log(this.login);
+  //   this.loginservice.checkUser(this.login).subscribe((data) =>
+  //   {
+  //     console.log(data);
+  //     this.gotoUser();
+  //   });
+  // }
 
   gotoAdmin()
   {

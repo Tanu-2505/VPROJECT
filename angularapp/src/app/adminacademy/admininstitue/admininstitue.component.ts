@@ -14,6 +14,8 @@ type Institue = Array<{ id: number; name: string; src:String; Place:String; rati
 })
 export class AdmininstitueComponent {
 
+  searchText!:string;
+
   faPenToSquare = faPenToSquare;
   faTrash = faTrash;
   faCirclePlus = faCirclePlus;
@@ -37,7 +39,7 @@ export class AdmininstitueComponent {
       alert("Institute deleted successfully");
     }
 
-    gotoeditcourse()
+    gotoeditinstitute()
     {
       this.router.navigate(['/admin/editinstitute']);
     }

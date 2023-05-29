@@ -14,6 +14,10 @@ import { AdminstudentComponent } from './adminacademy/adminstudent/adminstudent.
 import { StudentDetailsComponent } from './viewacademy/student-details/student-details.component';
 import { AddinstituteComponent } from './adminacademy/addinstitute/addinstitute.component';
 import { EditinstituteComponent } from './adminacademy/editinstitute/editinstitute.component';
+import { EditcourseComponent } from './adminacademy/editcourse/editcourse.component';
+import { AddcourseComponent } from './adminacademy/addcourse/addcourse.component';
+import { AddstudentComponent } from './adminacademy/addstudent/addstudent.component';
+import { UpdatestudentComponent } from './adminacademy/updatestudent/updatestudent.component';
 
 const routes: Routes = [
   {path:"",component:LoginComponent},
@@ -39,9 +43,14 @@ const routes: Routes = [
       {path:"",component:AdmininstitueComponent},
       {path:"institute",component:AdmininstitueComponent},
       {path:"course",component:AdmincourseComponent},
+      {path:"addcourse",component:AddcourseComponent},
+      {path:"editcourse",component:EditcourseComponent},
       {path:"students",component:AdminstudentComponent},
+      {path:"addstudent",component:AddstudentComponent},
+      {path:"updatestudent",component:UpdatestudentComponent},
       {path:"addinstitute",component:AddinstituteComponent},
       {path:"editinstitute",component:EditinstituteComponent}
+
    ]
   },
 
