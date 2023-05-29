@@ -12,7 +12,7 @@ type Institue = Array<{ id: number; name: string; src:String; Place:String; rati
 export class InstituteComponent {
 
   constructor(private router: Router){}
-
+  searchText!:string;
   institutes : Institue = [
                             { id: 1, name: "PSG CAS", src: "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29sbGVnZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",Place :"Coimbatore",rating:5},
                             { id: 2, name: "BIT", src: "https://static.businessworld.in/article/article_extra_large_image/1616143247_9SQluK_Bannari_Amman_Institute_of_Technology.jpg",Place :"Sathyamangalam",rating:4},

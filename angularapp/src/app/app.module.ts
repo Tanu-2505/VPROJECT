@@ -24,6 +24,7 @@ import { AdminstudentComponent } from './adminacademy/adminstudent/adminstudent.
 import { StudentDetailsComponent } from './viewacademy/student-details/student-details.component';
 import { AddinstituteComponent } from './adminacademy/addinstitute/addinstitute.component';
 import { EditinstituteComponent } from './adminacademy/editinstitute/editinstitute.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { EditinstituteComponent } from './adminacademy/editinstitute/editinstitu
     ReactiveFormsModule,
     FontAwesomeModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
