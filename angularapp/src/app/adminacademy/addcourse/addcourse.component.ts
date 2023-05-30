@@ -29,12 +29,13 @@ export class AddcourseComponent {
       StudentsEnrolled:['', Validators.required],
       CourseDescription:['', Validators.required],
   },);
-     ngAfterViewInit() {
+     
+
+  }
+ngAfterViewInit() {
     this.elementRef.nativeElement.ownerDocument
         .body.style.backgroundColor = '#808080';
 }
-
-  }
   get f() { return this.registerForm.controls; }
 
   onSubmit() {
